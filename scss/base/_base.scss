@@ -33,3 +33,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.text {
+  padding: 150px 0;
+  max-width: 1075px;
+  font-weight: 800;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: var(--black);
+}
