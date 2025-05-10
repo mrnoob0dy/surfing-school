@@ -29,8 +29,10 @@
 }
 
 .footer__logo {
-  width: 80px;
-  aspect-ratio: 1;
+  @media (max-width: 767px) {
+    width: 80px;
+    aspect-ratio: 1;
+  }
 }
 
 .footer__title {
