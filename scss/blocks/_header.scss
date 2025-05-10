@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 767px) {
+    padding-bottom: 30px;
+  }
 }
 
 .header__top {
@@ -13,12 +17,75 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 30px 0 20px;
+  }
+}
+
+.menu__btn {
+  display: none;
+  position: relative;
+  z-index: 5;
+
+  span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--blue);
+    transition: all 0.3s ease-in;
+  }
+
+  @media (max-width: 1024px) {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &--active {
+    .two {
+      display: none;
+    }
+    span {
+      position: absolute;
+      transition: all 0.3s ease-in;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 .menu__list {
   display: flex;
   align-items: center;
   gap: 40px;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 85px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--white);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
 }
 
 .menu__link {
@@ -55,6 +122,10 @@
   margin-bottom: 50px;
   position: relative;
   z-index: -1;
+
+  @media (max-width: 600px) {
+    margin-bottom: 40px;
+  }
 }
 
 .title-text {
@@ -72,17 +143,36 @@
     color: var(--white);
     background-color: var(--blue);
   }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 }
 
 .header__content {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .header__info {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px) {
+    gap: 35px;
+  }
 }
 
 .header__info-list {
@@ -92,6 +182,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 18px 10px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 }
 
 .header__info-link {
@@ -109,6 +208,14 @@
     color: var(--white);
     background-color: var(--blue);
   }
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
 }
 
 .header__social-list {
@@ -123,12 +230,30 @@
   &:hover {
     transform: translateY(-2px);
   }
+
+  @media (max-width: 767px) {
+    img {
+      width: 52px;
+      aspect-ratio: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    img {
+      width: 42px;
+      aspect-ratio: 1;
+    }
+  }
 }
 
 .header__news {
   display: flex;
   flex-direction: column;
   align-items: end;
+
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 }
 
 .header__news-box {
@@ -141,6 +266,14 @@
   border-radius: 10px;
   padding: 50px 20px;
   background-color: rgba(255, 255, 255, 0.8);
+
+  @media (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
 }
 
 .header__news-title {
@@ -148,6 +281,10 @@
   font-size: 32px;
   text-transform: uppercase;
   color: var(--black);
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
 }
 
 .header__news-time {
@@ -156,6 +293,10 @@
   font-size: 32px;
   text-transform: uppercase;
   color: var(--black);
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
 }
 
 .header__news-link {
@@ -171,6 +312,11 @@
   &:hover {
     color: var(--blue);
   }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 }
 
 .header__news-img {
@@ -181,6 +327,18 @@
   display: flex;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: row;
+  }
 }
 
 .header__btns-link {
@@ -212,5 +370,10 @@
       color: var(--white);
       background-color: var(--blue);
     }
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    height: 52px;
   }
 }

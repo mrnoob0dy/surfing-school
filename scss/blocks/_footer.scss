@@ -1,6 +1,10 @@
 .footer {
   padding: 100px 0;
   background-color: var(--black);
+
+  @media (max-width: 767px) {
+    padding: 50px 0;
+  }
 }
 
 .footer__inner {
@@ -12,6 +16,21 @@
   display: flex;
   justify-content: space-between;
   gap: 30px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+.footer__logo {
+  width: 80px;
+  aspect-ratio: 1;
 }
 
 .footer__title {
@@ -19,12 +38,30 @@
   font-size: 64px;
   text-transform: uppercase;
   color: var(--white);
+
+  @media (max-width: 1024px) {
+    font-size: 44px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+    order: 1;
+  }
 }
 
 .footer__content {
   margin-bottom: 60px;
   display: flex;
   gap: 68px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 40px;
+    gap: 30px;
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer__item {
@@ -37,12 +74,20 @@
   font-weight: 700;
   font-size: 20px;
   color: var(--white);
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .footer__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
 }
 
 .footer__list-link {
@@ -55,6 +100,10 @@
   &:hover {
     color: var(--blue);
   }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 
 .footer__bottom {
@@ -62,6 +111,12 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 50px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 .footer__socials-list {
@@ -76,11 +131,28 @@
   &:hover {
     transform: translateY(-2px);
   }
+
+  @media (max-width: 767px) {
+    img {
+      width: 52px;
+      aspect-ratio: 1;
+    }
+  }
 }
 
 .footer__copyright {
   display: flex;
   gap: 40px;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .footer__copyright-item {
@@ -91,5 +163,9 @@
 
   &:hover {
     color: var(--blue);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
   }
 }
